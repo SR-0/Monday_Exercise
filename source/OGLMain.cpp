@@ -13,7 +13,7 @@ const unsigned int	ANTI_ALIASING	= 4;
 
 
 
-int main(void)
+int main()
 {
 	Engine::Create(WIDTH, HEIGHT, TITLE, nullptr, nullptr, ANTI_ALIASING);
 	Engine::Setup();
