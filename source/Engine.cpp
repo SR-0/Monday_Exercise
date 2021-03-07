@@ -289,11 +289,11 @@ void Engine::Draw2DTriangle()
 	glEnableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
 	glVertexAttribPointer(
-		0,			// attribute 0. No particular reason, but must match the layout in shader
-		3,			// size
+		0,		// attribute 0. No particular reason, but must match the layout in shader
+		3,		// size
 		GL_FLOAT,	// type
 		GL_FALSE,	// normalized
-		0,			// stride
+		0,		// stride
 		(void*)0	// array buffer offset
 	);
 
