@@ -29,7 +29,7 @@ void Engine::Create(unsigned int width, unsigned int height, const char* title, 
 void Engine::Setup()
 {
 	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);	// for grabbing user input
-	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);					// set window clear color
+	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);			// set window clear color
 }
 
 void Engine::Update()
@@ -82,10 +82,10 @@ int Engine::InitializeGLFWWindowContext(unsigned int width, unsigned int height,
 {
 	/* initialize/create OpenGL window and context */
 
-	glfwWindowHint(GLFW_SAMPLES, antialiasing);						// set antialiasing
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);					// we want openGL 3.3
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);					// ^
-	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);			// MacOS B.S. 
+	glfwWindowHint(GLFW_SAMPLES, antialiasing);			// set antialiasing
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);			// we want openGL 3.3
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);			// ^
+	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);		// MacOS B.S. 
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);	// say no to old OpenGL
 
 	window = glfwCreateWindow(width, height, title, monitor, share);
@@ -126,8 +126,8 @@ void Engine::InitializeVertexArrayObject()
 		0.0,	1.0,	0.0f
 	};
 
-	glGenBuffers(1, &vertexBuffer);																	// generate 1 buffer and put resulting identifier in vertexBuffer
-	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);													// ? the following commands will talk about our "vertextBuffer" buffer ?
+	glGenBuffers(1, &vertexBuffer);									// generate 1 buffer and put resulting identifier in vertexBuffer
+	glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);							// ? the following commands will talk about our "vertextBuffer" buffer ?
 	glBufferData(GL_ARRAY_BUFFER, sizeof(gVertexBufferData), gVertexBufferData, GL_STATIC_DRAW);
 }
 
@@ -317,8 +317,8 @@ bool Engine::IsRunning()
 	/* good enough of a check for now */
 
 	if (
-		(glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS) && 
-		(glfwWindowShouldClose(window) == 0)				)
+		(glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS) 	&& 
+		(glfwWindowShouldClose(window) == 0)			)
 	{
 		return true;
 	}
