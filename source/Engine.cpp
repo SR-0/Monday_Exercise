@@ -4,7 +4,7 @@
 
 
 
-GLFWwindow* Engine::window;
+GLFWwindow*	Engine::window;
 GLuint		Engine::vertexArrayID;
 GLuint		Engine::vertexBuffer;
 GLuint		Engine::vertexShaderID;
