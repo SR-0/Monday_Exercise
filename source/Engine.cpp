@@ -15,7 +15,7 @@ GLuint		Engine::programID;
 
 
 
-#pragma region CREATE - SETUP - UPDATE - RENDER = DESTROY
+#pragma region CREATE - SETUP - UPDATE - RENDER - DESTROY
 
 void Engine::Create(unsigned int width, unsigned int height, const char* title, GLFWmonitor* monitor, GLFWwindow* share, unsigned int antialiasing)
 {
@@ -57,7 +57,7 @@ void Engine::Destroy()
 	delete window; // what goes up must come down
 }
 
-#pragma endregion CREATE - SETUP - UPDATE - RENDER = DESTROY
+#pragma endregion CREATE - SETUP - UPDATE - RENDER - DESTROY
 
 
 
@@ -69,7 +69,7 @@ int Engine::InitializeGLFWCore()
 {
 	/* initialize/create glfw */
 
-	glewExperimental = true; // needed for core profile // glewExperimental allows extension entry points to be loaded even if the extension isn’t present in the driver’s extensions string. <- source https://community.khronos.org/t/glewexperimental/72738
+	glewExperimental = true; // needed for core profile // glewExperimental allows extension entry points to be loaded even if the extension isnâ€™t present in the driverâ€™s extensions string. <- source https://community.khronos.org/t/glewexperimental/72738
 
 	if (!glfwInit())
 	{
@@ -274,7 +274,7 @@ int Engine::InitializeShaders(const char* vertex_file_path, const char* fragment
 	glDeleteShader(fragmentShaderID);
 }
 
-#pragma endregion SPECIFIC SETUP FUNCTIONS
+#pragma endregion SPECIFIC CREATE FUNCTIONS
 
 
 
